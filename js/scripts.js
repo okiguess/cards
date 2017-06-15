@@ -3,9 +3,16 @@ $(document).ready(function() {
   var suits = ["hearts","spades","clubs","diamonds"];
   var ranks = ["ace","two","three","four","five","six","seven","eight","nine","ten","jack","queen","king",];
 
-  suits.forEach(function(suit) {
+  var deck = [];
 
-
-    $("#deal").append("<li>" + suit + "</li>");
+  $("#deal").click(function() {
+    suits.forEach(function(suit) {
+      ranks.forEach(function(rank) {
+        $("#deal-list").append("<li>" + suit + rank + "</li>");
+      })
+    })
   });
+
+
+
 });
